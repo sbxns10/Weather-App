@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  backdrop-filter: blur(8px);
+}
+
+
+.header {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #64b5f6;
+  box-shadow: 0 0 8px rgba(100, 181, 246, 0.3);
+}
+
+button {
+  padding: 12px 24px;
+  background: #42a5f5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1e88e5;
+  transform: translateY(-1px);
+}
+
+.weather-card {
+  text-align: center;
+}
+
+#weather-icon img {
+  width: 100px;
+  height: 100px;
+  margin: -10px 0;
+}
+
+.weather-info {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  color: #37474f;
+}
+
+#temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.details {
+  background: rgba(236, 239, 241, 0.5);
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-item span:first-child {
+  color: #607d8b;
+  font-size: 0.9rem;
+}
+
+.detail-item span:last-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+#error-message {
+  color: #fff;
+  background: #ef5350;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
